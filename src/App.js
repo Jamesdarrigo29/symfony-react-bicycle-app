@@ -34,7 +34,7 @@ function App() {
   const runBicycle = () => {
     if (bicycleRunnable && !bicycleRunning) {
       setBicycleRunning(true);
-      fetch('http://127.0.0.1:8000/api/bicycle/run', {
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/api/bicycle/run`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
