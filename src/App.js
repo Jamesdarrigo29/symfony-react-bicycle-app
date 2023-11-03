@@ -36,9 +36,6 @@ function App() {
       setBicycleRunning(true);
       fetch(`${process.env.REACT_APP_BACKEND_URL}/api/bicycle/run`, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
       })
         .then((response) => {
           if (response.status === 200) {
